@@ -14,13 +14,6 @@ namespace WebApplicationExample.Controllers
     {
         private CodeChallenge db = new CodeChallenge();
 
-        // GET: UserProjects
-        public ActionResult Index()
-        {
-            var userProjects = db.UserProjects.Include(u => u.Project);
-            return View(userProjects.ToList());
-        }
-
         // GET: UserProjects/Details/5
         public ActionResult ViewProjects(int? UserId)
         {
